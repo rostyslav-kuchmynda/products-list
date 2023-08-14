@@ -1,0 +1,18 @@
+@import "../../scss/base";
+
+.navBar {
+
+  ul {
+    display: flex;
+  }
+
+  .menuBtn {
+    font-size: 1.4rem;
+    color: $textColor;
+
+    &:hover {
+      color: darken($textColor, 10%);
+      background: none;
+    }
+  }
+}

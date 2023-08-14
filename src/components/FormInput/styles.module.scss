@@ -1,0 +1,11 @@
+@import "../../scss/base";
+
+.formInputWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  >label {
+    margin-block-end: 0.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../scss/base";
+
+.layoutBody {
+  flex-grow: 1;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  .contentLayout {
+    display: flex;
+    flex-grow: 1;
+    padding-inline: 2.4rem;
+  }
+}

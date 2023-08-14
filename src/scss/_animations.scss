@@ -1,0 +1,23 @@
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(2rem);
+  }
+}
+
+@keyframes enterDropdown {
+  from {
+    opacity: 0;
+    transform: translate(0, 1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0rem);
+  }
+}
