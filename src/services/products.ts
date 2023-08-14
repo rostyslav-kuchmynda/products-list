@@ -52,4 +52,16 @@ export class ProductService {
       return {};
     }
   }
+
+  static async searchForProducts(query: string): Promise<Array<ProductType>> {
+    try {
+      const response = await fetch(`${REACT_APP_DUMMY_SERVICE}/products/search?q=${query}`);
+      const resObj = await response.json();
+      return resObj.products;
+    } catch (error) {
+      console.error('Failed to search the product. Ended with error:', (error as Error).message);
+
+      return [];
+    }
+  }
 }

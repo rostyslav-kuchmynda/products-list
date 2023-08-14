@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { Header } from '../../components/Header';
@@ -8,7 +9,6 @@ import { useTypedDispatch } from '../../hooks/storeHooks';
 import { uiGetProductList } from '../../store';
 
 import classes from './styles.module.scss';
-import { useEffect } from 'react';
 
 export const Layout: React.FC = () => {
   const dispatch = useTypedDispatch();

@@ -2,6 +2,8 @@ import React, { useCallback, useMemo } from 'react';
 import { Popconfirm, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 
+import { SearchInput } from '../SearchInput';
+
 import { ProductType } from '../../types/products';
 import { useTypedDispatch, useTypedSelector } from '../../hooks/storeHooks';
 import { getAllProducts, uiDeleteProductByID } from '../../store';
@@ -117,5 +119,10 @@ export const ProductsTable: React.FC = () => {
     [handleDelete]
   );
 
-  return <Table columns={columns} dataSource={products} scroll={{ y: 440 }} />;
+  return (
+    <div className={classes.tableWrap}>
+      <SearchInput />
+      <Table className={classes.tableListWrap} columns={columns} dataSource={products} scroll={{ y: 440 }} />
+    </div>
+  );
 };

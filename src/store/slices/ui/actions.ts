@@ -18,3 +18,8 @@ export const uiAddProduct = createAsyncThunk(`${UI_SLICE_ID}/addProduct`, async 
   const response = await ProductService.addProduct(values);
   return response;
 });
+
+export const uiSearchProduct = createAsyncThunk(`${UI_SLICE_ID}/searchProduct`, async (query: string) => {
+  const response = await ProductService.searchForProducts(query);
+  return response;
+});

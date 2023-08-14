@@ -1,7 +1,15 @@
 @import "../../scss/base";
 
+.tableWrap {
+  display: flex;
+  flex-direction: column;
+}
 
 .imageClass {
   width: 10rem;
   height: 10rem;
+}
+
+.tableListWrap {
+  margin-block-start: 5rem;
 }

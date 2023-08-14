@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { uiAddProduct, uiDeleteProductByID, uiGetProductList } from './actions';
+import { uiAddProduct, uiDeleteProductByID, uiGetProductList, uiSearchProduct } from './actions';
 
 import { UI_SLICE_ID, UIStateSlice } from './types';
 
@@ -24,6 +24,10 @@ export const uiSlice = createSlice({
     builder.addCase(uiAddProduct.fulfilled, (state, action) => {
       const numberOfProducts = state.productList.length + 1;
       state.productList = [...state.productList, { ...action.meta.arg, id: numberOfProducts }];
+    });
+
+    builder.addCase(uiSearchProduct.fulfilled, (state, action) => {
+      state.productList = action.payload;
     });
   },
 });
