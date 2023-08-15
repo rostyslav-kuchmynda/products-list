@@ -14,7 +14,7 @@ export const ProductForm: React.FC = () => {
   const dispatch = useTypedDispatch();
   const { handleChange, values, handleSubmit, errors } = useFormik({
     initialValues: {
-      id: 31,
+      id: 0,
       title: '',
       description: '',
       price: 1,
