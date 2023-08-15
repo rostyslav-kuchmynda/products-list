@@ -122,7 +122,13 @@ export const ProductsTable: React.FC = () => {
   return (
     <div className={classes.tableWrap}>
       <SearchInput />
-      <Table className={classes.tableListWrap} columns={columns} dataSource={products} scroll={{ y: 440 }} />
+      <Table
+        className={classes.tableListWrap}
+        columns={columns}
+        dataSource={products}
+        rowKey={record => record.id}
+        scroll={{ y: 440 }}
+      />
     </div>
   );
 };
